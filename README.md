@@ -3,5 +3,5 @@
 ```
 git clone https://github.com/leo-need-more-coffee/kvartirka.git
 cd kvartirka
-docker-compose up
+docker-compose up #or docker compose up
 ```
