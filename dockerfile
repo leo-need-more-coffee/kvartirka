@@ -10,4 +10,5 @@ RUN set -xe \
     && apt-get install -y postgresql-client
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-
+CMD ["python3", "manage.py", "makemigrations"]
+CMD ["python3", "manage.py", "migrate"]
