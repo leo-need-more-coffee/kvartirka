@@ -17,7 +17,7 @@ services:
     command: sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:9879"
     ports:
-      - 8000:8000
+      - 9879:9879
     environment:
       POSTGRES_HOST: db
     restart: always
