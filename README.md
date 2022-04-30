@@ -12,3 +12,5 @@ docker-compose up #or docker compose up
 Документация swagger:
      http://localhost:9879/doc/
 
+P.S:
+Честно говоря, я до этого никогда не использовал докер и свагер.
