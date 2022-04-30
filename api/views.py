@@ -31,7 +31,7 @@ def add_article(request):
     return Response(serializer.data)
 
 
-@swagger_auto_schema(method='get', operation_description="Получает список комментариев.", responses={200: openapi.Response('Список комментариев.', CommentSerializer)})
+@swagger_auto_schema(method='get', operation_description="Получает список комментариев. Параметр запроса deep - глубина, до которой выводятся комментарии.", responses={200: openapi.Response('Список комментариев.', CommentSerializer)})
 @api_view(['GET'])
 def get_comments(request, article_id=None, comment_id=None):
     deep = int(request.query_params.get('deep', 10**9))
@@ -44,7 +44,7 @@ def get_comments(request, article_id=None, comment_id=None):
     return Response(serializer.data)
 
 
-@swagger_auto_schema(method='post', operation_description="Создает комментарий.", responses={201: openapi.Response('Комментарий.', CommentSerializer)})
+@swagger_auto_schema(method='post', operation_description="Создает комментарий. (parent отвечает за родительский комментарий)", responses={201: openapi.Response('Комментарий.', CommentSerializer)})
 @api_view(['POST'])
 def add_comment(request, article_id=None):
     parent = request.query_params.get('parent_id', None)
