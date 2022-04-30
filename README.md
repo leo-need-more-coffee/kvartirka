@@ -1,6 +1,6 @@
 # Тестовое задание для kvartirka.
 
-Установка с помощью docker-compose:
+Установка с помощью docker-compose(необходим docker compose v2+):
 ```
 git clone https://github.com/leo-need-more-coffee/kvartirka.git
 cd kvartirka
