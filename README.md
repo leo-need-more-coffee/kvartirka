@@ -10,5 +10,5 @@ docker-compose up #or docker compose up
      http://localhost:9879/api/
 
 Документация swagger:
-     http://localhost/doc/
+     http://localhost:9879/doc/
 
